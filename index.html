@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Tags Input (directive)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div ng-app="rtbApp" ng-controller="mainController">
+  <div class="share-area">
+    <div class="text-header">Share "{{boardName}}" with others</div>
+    <div class="input-wrapper">
+      <email-input emails="emails"></email-input>
+    </div>
+  </div>
+  <div class="buttons-area">
+    <div class="buttons-wrapper">
+      <button class="btn-add" ng-click="addRndEmail()">Add email</button>
+      <button class="btn-count" ng-click="alertEmailsCount()">Get emails count</button>
+    </div>
+  </div>
+</div>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

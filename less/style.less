@@ -1,0 +1,145 @@
+//colors for controller
+@cl-btn-bg: #6699ff;
+@cl-btn-text: #FFFFFF;
+@cl-sharearea-bg: #F5F5F5;
+@cl-header-text: #333333;
+
+//sizes for controller
+@sz-header: 20px;
+@sz-input-w: 420px;
+@sz-input-h: 100px;
+
+//colors for directive
+@cl-emailinput-error-underline: #d14836;
+@cl-emailinput-area-border: #CCCCCC;
+@cl-emailinput-area-bg: #FFFFFF;
+@cl-emailinput-block: #D9E8FF;
+@cl-emailinput-block-text: #333333;
+
+//styles for controller
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.share-area{  
+  background: @cl-sharearea-bg;
+  padding: 50px 0 30px 50px;
+  .text-header{
+    font-family: 'Open Sans', sans-serif;    
+    font-size: @sz-header;
+    color: @cl-header-text;
+    margin: 0 auto 34px auto;
+    width: @sz-input-w;    
+  }
+  .input-wrapper{
+    width: @sz-input-w;
+    height: @sz-input-h;
+    margin: 0 auto; 
+  }
+}
+.buttons-area{
+  padding: 30px 0 0 50px;
+  .buttons-wrapper{
+    width: @sz-input-w;
+    margin: 0 auto;
+    button{
+      background: @cl-btn-bg;
+      border: none;
+      border-radius: 2px;
+      height: 30px;      
+      margin: 0 16px 0 0;
+      color: @cl-btn-text;
+    }
+    .btn-add{
+      padding: 0 23px 0 19px;
+    }
+    .btn-count{
+      padding: 0 10px 0 11px;
+    }
+  }
+}
+
+//styles for directive
+.ng-emailinput-mixin-text{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13.2px;  
+}
+
+.ng-emailinput-mixin-align{
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.ng-emailinput-mixin-aligntext{
+  display: inline-block;
+  line-height: 22px;
+}
+
+.ng-emailinput-mixin-elem-common{
+  .ng-emailinput-mixin-align;
+  height: 23px;
+  color: @cl-emailinput-block-text;
+}
+
+.ng-emailinput-mixin-block-common{
+  .ng-emailinput-mixin-text;
+  border: none;
+  border-radius: 20px;
+  padding: 0 9px 1px 9px;
+  margin: 7px 6px 2px 0;
+}
+
+.ng-emailinput-mixin-clear-textarea{
+  border: none;
+  overflow-y: auto;  
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  outline: none;
+}
+
+.ng-emailinput-area {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid @cl-emailinput-area-border;
+  background: @cl-emailinput-area-bg;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 1px 5px 8px;
+  
+  textarea{
+    .ng-emailinput-mixin-clear-textarea;
+    .ng-emailinput-mixin-elem-common;
+    .ng-emailinput-mixin-text;
+    padding: 8px 0 0 0;
+  }
+  
+  .ng-emailinput-email-tag{
+    .ng-emailinput-mixin-elem-common;
+    .ng-emailinput-mixin-block-common;
+    background: @cl-emailinput-block;
+  }
+  
+  .ng-emailinput-email-text-valid{
+    .ng-emailinput-mixin-aligntext;
+  }
+  
+  .ng-emailinput-email-text-error{
+    .ng-emailinput-mixin-aligntext;
+    border-bottom: 2px dotted @cl-emailinput-error-underline;
+  }
+  
+  .ng-emailinput-tag-btn-cross{
+    .ng-emailinput-mixin-align;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17.2px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0 0 2px;
+    line-height: 22px;
+  }
+}

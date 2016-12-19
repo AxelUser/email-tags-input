@@ -1,0 +1,1 @@
+This is simple tags input for emails. Element`s separator is comma. You could paste batch and input will parse emails into separate blocks. Btw, new block will be created on enter click and if input would lost focus.
