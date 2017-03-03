@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Tags Input (directive)</title>
+  <title>Tags Input (Angular1 directive)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   
@@ -13,17 +13,17 @@
 </head>
 
 <body>
-  <div ng-app="rtbApp" ng-controller="mainController">
-  <div class="share-area">
-    <div class="text-header">Share "{{boardName}}" with others</div>
-    <div class="input-wrapper">
+  <div ng-app="tagApp" ng-controller="mainController">
+  <div class="share">
+    <div class="share__header">Share "{{fileName}}" with others</div>
+    <div class="share__input">
       <email-input emails="emails"></email-input>
     </div>
   </div>
-  <div class="buttons-area">
-    <div class="buttons-wrapper">
-      <button class="btn-add" ng-click="addRndEmail()">Add email</button>
-      <button class="btn-count" ng-click="alertEmailsCount()">Get emails count</button>
+  <div class="buttons">
+    <div class="buttons__wrapper">
+      <button class="buttons__common buttons__common_theme_add" ng-click="addRandomEmail()">Add email</button>
+      <button class="buttons__common buttons__common_theme_count" ng-click="alertEmailsCount()">Get emails count</button>
     </div>
   </div>
 </div>
